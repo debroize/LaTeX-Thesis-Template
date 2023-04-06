@@ -1,0 +1,72 @@
+\usepackage{caption} 
+
+% Figures
+\captionsetup[figure]{labelfont={small,bf},
+                    textfont={small},
+                    labelsep=colon,
+                    % singlelinecheck=false,
+                    % format=plain,
+                    % parindent=0em
+                    }
+
+
+% Tables
+%%%
+% Zeilenumbruch nach Tabellen ID
+\newcommand\thistablecaption{}
+\newcommand{\tablecaption}[2]{\def\thistablecaption{#1}\caption[#1]{#2}}
+
+\DeclareCaptionFormat{myformat}{%
+  #1#2{\captionlabelfont\thistablecaption}\par#3%
+}
+
+\captionsetup[table]{format=myformat}
+%%%
+
+% Tabelle mit fetter ID und kleiner Schriftart
+\captionsetup[table]{labelfont={small,bf},
+                    textfont={small},
+                    labelsep=colon,
+                    singlelinecheck=false,
+                    % format=plain,
+                    parindent=0em}
+
+
+% Tabelle zitieren
+\newcommand{\tabref}[1]{\textbf{Tab.}~\ref{#1}}
+\newcommand{\tabrefp}[1]{(\textbf{Tab.}~\ref{#1})}
+
+
+%%% ---------------------------------
+% ISBN Zeilenumbruch
+\newcommand{\ISBN}[1]{\breakisbn{#1}}
+\newcommand{\breakisbn}[1]{%
+  \begingroup
+  \def\\##1{##1\hfill}%
+  \def\##1{\texttt{##1}}%
+  \tt\def\~{ }%
+  \def\^#1{#1}%
+  \hbox_to\hsize{\hfil\breakisbnaux#1\breakisbnaux}%
+  \endgroup
+}
+\def\breakisbnaux#1 {#1\hfil\penalty0\strut}
+
+
+%%% ---------------------------------
+% Zitierungen von Subfigures
+\newcommand{\subfigref}[2]{\textbf{Fig.}\hyperref[#1]{~\ref{#1}\subref{#2}}}
+
+% % Zitierung von Online Links
+  \DeclareCiteCommand{\citehyperlinkdate}
+  {\usebibmacro{prenote}}
+  {\printnames{author}, \printtext[bibhyperref]{%
+      \printdate}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+  \DeclareCiteCommand{\citehyperlink}
+  {\usebibmacro{prenote}}
+  {\printtext[bibhyperref]{%
+    \printnames{author}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}

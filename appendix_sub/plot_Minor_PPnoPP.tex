@@ -1,0 +1,118 @@
+% \subsection{Favorized Configurations \texttwelveudash\space Preprocessing vs. No Preprocessing}
+\subsection{Preprocessing vs. No Preprocessing}
+~\label{sec:MinorTests:sub:StandImgs_TrainCurves_PPnoPP}
+Below, the training curves of the favorized configurations are compared against itself with and without TensorFlow image preprocessing.
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Classification
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    %% Classification, iSet 2 
+    \subfigure[Class. PP, iSet 2]{\label{fig:Ap_PPnoPP_C2P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_class_s2_f1_mob_adam_bs64_ep25_pp.pdf}}
+    \subfigure[Class. NoPP, iSet 2]{\label{fig:Ap_PPnoPP_C2N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_class_s2_f1_mob_adam_bs64_ep25.pdf}}
+    %% Classification, iSet 8
+    \subfigure[Class. PP, iSet 8]{\label{fig:Ap_PPnoPP_C8P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_class_s8_f1_mob_adam_bs64_ep25_pp.pdf}}
+    \subfigure[Class. NoPP, iSet 8]{\label{fig:Ap_PPnoPP_C8N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_class_s8_f1_mob_adam_bs64_ep25.pdf}}
+    
+    \caption{Classification: With image preprocessing (PP) and without image preprocessing (NoPP) on (a, b) iSet 2 (Transect) and (c, d) iSet 8 (Stand) standard images.
+            }
+    \space\label{fig:Ap_PPnoPP_C}
+\end{figure}%
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Quantification
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% FWD
+\begin{figure}[H]
+    \centering
+    %% Classification, iSet 2 
+    \subfigure[FWD PP, iSet 2]{\label{fig:Ap_PPnoPP_FWD1P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_quant_fwd_s1_f1_vgg_adam_bs32.pdf}}
+    \subfigure[FWD NoPP, iSet 2]{\label{fig:Ap_PPnoPP_FWD1N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_quant_fwd_s1_f1_vgg_adam_bs32_nopp.pdf}}
+    %% Classification, iSet 8
+    \subfigure[FWD PP, iSet 8]{\label{fig:Ap_PPnoPP_FWD8P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_quant_fwd_s8_f1_mob_adam_bs64.pdf}}
+    \subfigure[FWD NoPP, iSet 8]{\label{fig:Ap_PPnoPP_FWD8N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_quant_fwd_s8_f1_mob_adam_bs64_nopp.pdf}}
+    
+    \caption{FWD Quantification: With image preprocessing (PP) and without image preprocessing (NoPP) on (a, b) iSet 2 (Transect) and (c, d) iSet 8 (Stand) standard images.
+            }
+    \space\label{fig:Ap_PPnoPP_FWD}
+\end{figure}%
+%%%
+%% Cover
+\begin{figure}[H]
+    \centering
+    %% Classification, iSet 2 
+    \subfigure[Coverage PP, iSet 2]{\label{fig:Ap_PPnoPP_Cov1P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_quant_cov_s1_f1_inc_sgd_bs64.pdf}}
+    \subfigure[Coverage NoPP, iSet 2]{\label{fig:Ap_PPnoPP_Cov1N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_quant_cov_s1_f1_inc_sgd_bs64_nopp.pdf}}
+    %% Classification, iSet 8
+    \subfigure[Coverage PP, iSet 8]{\label{fig:Ap_PPnoPP_Cov8P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_quant_cov_s8_f1_vgg_adam_bs32.pdf}}
+    \subfigure[Coverage NoPP, iSet 8]{\label{fig:Ap_PPnoPP_Cov8N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_quant_cov_s8_f1_vgg_adam_bs32_nopp.pdf}}
+    
+    \caption{Coverage Quantification: With image preprocessing (PP) and without image preprocessing (NoPP) on (a, b) iSet 2 (Transect) and (c, d) iSet 8 (Stand) standard images.
+            }
+    \space\label{fig:Ap_PPnoPP_Cov}
+\end{figure}%
+%%%
+%% Biomass
+\begin{figure}[H]
+    \centering
+    %% Classification, iSet 2 
+    \subfigure[BM PP, iSet 2]{\label{fig:Ap_PPnoPP_BM1P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_quant_bm_s1_f1_vgg_adam_bs32.pdf}}
+    \subfigure[BM NoPP, iSet 2]{\label{fig:Ap_PPnoPP_BM1N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_quant_bm_s1_f1_vgg_adam_bs32_nopp.pdf}}
+    %% Classification, iSet 8
+    \subfigure[BM PP, iSet 8]{\label{fig:Ap_PPnoPP_BM8P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_quant_bm_s8_f1_vgg_adam_bs32.pdf}}
+    \subfigure[BM NoPP, iSet 8]{\label{fig:Ap_PPnoPP_BM8N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_quant_bm_s8_f1_vgg_adam_bs32_nopp.pdf}}
+    
+    \caption{BM Quantification: With image preprocessing (PP) and without image preprocessing (NoPP) on (a, b) iSet 2 (Transect) and (c, d) iSet 8 (Stand) standard images.
+            }
+    \space\label{fig:Ap_PPnoPP_BM}
+\end{figure}%
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Categorisation
+%%%%%%%%%%%%%%%%%%%%%%%%
+% %% FWD
+% \begin{figure}[H]
+%     \centering
+%     %% Classification, iSet 2 
+%     \subfigure[FWD PP, iSet 2]{\label{fig:Ap_PPnoPP_FWD1P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_quant_fwd_s1_f1_vgg_adam_bs32.pdf}}
+%     \subfigure[FWD NoPP, iSet 2]{\label{fig:Ap_PPnoPP_FWD1N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_quant_fwd_s1_f1_vgg_adam_bs32_nopp.pdf}}
+%     %% Classification, iSet 8
+%     \subfigure[FWD PP, iSet 8]{\label{fig:Ap_PPnoPP_FWD8P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_quant_fwd_s8_f1_mob_adam_bs64.pdf}}
+%     \subfigure[FWD NoPP, iSet 8]{\label{fig:Ap_PPnoPP_FWD8N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_quant_fwd_s8_f1_mob_adam_bs64_nopp.pdf}}
+    
+%     \caption{FWD Categorization: With image preprocessing (PP) and without image preprocessing (NoPP) on (a, b) iSet 2 (Transect) and (c, d) iSet 8 (Stand) standard images.
+%             }
+%     \space\label{fig:Ap_PPnoPP_CatFWD}
+% \end{figure}%
+% %%%
+% %% Cover
+% \begin{figure}[H]
+%     \centering
+%     %% Classification, iSet 2 
+%     \subfigure[Coverage PP, iSet 2]{\label{fig:Ap_PPnoPP_Cov1P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_quant_cov_s1_f1_inc_sgd_bs64.pdf}}
+%     \subfigure[Coverage NoPP, iSet 2]{\label{fig:Ap_PPnoPP_Cov1N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_quant_cov_s1_f1_inc_sgd_bs64_nopp.pdf}}
+%     %% Classification, iSet 8
+%     \subfigure[Coverage PP, iSet 8]{\label{fig:Ap_PPnoPP_Cov8P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_quant_cov_s8_f1_vgg_adam_bs32.pdf}}
+%     \subfigure[Coverage NoPP, iSet 8]{\label{fig:Ap_PPnoPP_Cov8N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_quant_cov_s8_f1_vgg_adam_bs32_nopp.pdf}}
+    
+%     \caption{Coverage Categorization: With image preprocessing (PP) and without image preprocessing (NoPP) on (a, b) iSet 2 (Transect) and (c, d) iSet 8 (Stand) standard images.
+%             }
+%     \space\label{fig:Ap_PPnoPP_CatCov}
+% \end{figure}%
+% %%%
+% %% Biomass
+% \begin{figure}[H]
+%     \centering
+%     %% Classification, iSet 2 
+%     \subfigure[BM PP, iSet 2]{\label{fig:Ap_PPnoPP_BM1P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_quant_bm_s1_f1_vgg_adam_bs32.pdf}}
+%     \subfigure[BM NoPP, iSet 2]{\label{fig:Ap_PPnoPP_BM1N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_quant_bm_s1_f1_vgg_adam_bs32_nopp.pdf}}
+%     %% Classification, iSet 8
+%     \subfigure[BM PP, iSet 8]{\label{fig:Ap_PPnoPP_BM8P}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_pp/tcfinal_quant_bm_s8_f1_vgg_adam_bs32.pdf}}
+%     \subfigure[BM NoPP, iSet 8]{\label{fig:Ap_PPnoPP_BM8N}\includegraphics[width=0.416\textwidth]{figures/run_history/final_runs/comp_pp_nopp/fav1_nopp/tcfinal_quant_bm_s8_f1_vgg_adam_bs32_nopp.pdf}}
+    
+%     \caption{BM Categorization: With image preprocessing (PP) and without image preprocessing (NoPP) on (a, b) iSet 2 (Transect) and (c, d) iSet 8 (Stand) standard images.
+%             }
+%     \space\label{fig:Ap_PPnoPP_CatBM}
+% \end{figure}%

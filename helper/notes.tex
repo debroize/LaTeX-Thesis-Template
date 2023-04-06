@@ -1,0 +1,145 @@
+%%%%%%%%%%%%%%%%%%%%
+%%% Figures
+%%%%%%%%%%%%%%%%%%%%
+%%%%% Sample Figure
+
+\begin{figure}[ht]
+    \begin{center}
+      \includegraphics[width=\textwidth]{figures/\dots.png} % Path to figure
+    \caption{\lipsum[3] % Caption text. optional: \caption[<list of figures caption>]{<in-text-caption>}
+             }
+    \space\label{fig:Sample_Figure}
+    \end{center}
+\end{figure} 
+
+Cite figure~\prettyref{fig:Sample_Figure}
+
+%%%%% Multi-Image Figure
+\begin{figure}[htbp]
+  \centering
+  \subfigure[Text a]{\label{fig:Subfig_a}\includegraphics[width=.2666\textwidth]{figures/sample_images/P6102278.JPG}} % 4:3 image
+  \subfigure[Text b]{\label{fig:Subfig_b}\includegraphics[width=.20\textwidth, angle=90]{figures/sample_images/P6102287.JPG}} % 3:4 image
+  \subfigure[Text c]{\label{fig:Subfig_c}\includegraphics[width=.2666\textwidth]{figures/sample_images/P6102290.JPG}} % 4:3 image
+  \subfigure[Text d]{\label{fig:Subfig_d}\includegraphics[width=.2666\textwidth]{figures/sample_images/P6102300.JPG}} % 4:3 image
+
+  % \caption{Image type examples for (a) Stand, (b) Transect [top], (c) Transect [side] and (d) Floor}
+  \caption{Image type examples}
+  \space\label{fig:Main_Figure_Caption}
+\end{figure}%
+
+Cite subfigure \subfigref{fig:Main_Figure_Caption}{fig:Subfig_a}
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%% Tables
+%%%%%%%%%%%%%%%%%%%%
+%%% Small Table (centered)
+\begin{table}[ht]
+  \captionsetup{justification=centering,margin=2cm, singlelinecheck=false, format=plain}
+  \centering
+  \begin{tabular}{@{}lllll@{}}
+  \toprule
+   & \textbf{WoodyShrub} & \textbf{FineShrub} & \textbf{MossHerb} & \textbf{Herb} \\ \midrule
+  \textbf{R²}   & -0.999 & -0.175 & 0.203 & -1.835 \\
+  \textbf{RMSE} & 5391   & 1307   & 844   & 1384   \\
+  \textbf{MAE}  & 2150   & 512    & 486   & 764    \\
+  \textbf{STD}  & 4944   & 1202   & 690   & 1154   \\ \bottomrule
+  \end{tabular}
+  \caption{Biomass, quantification prediction metrics, iSet 1.
+          \newline
+          RMSE: root mean squared error, MAE: mean absolute error, STD: standard deviation.
+          }
+  \space\label{tab:pred_metrics:met_iSet1_bm}
+\end{table}
+
+
+%%% Table over full page width
+\begin{table}[ht]
+  \caption{One-hot encoding example for each categorical target. The lookup table for encoded vectors is shown in \tabref{tab:OneHot_LUT}.}
+  \begin{tabularx}{\textwidth}{@{}lcX@{}} 
+      \toprule
+      \textbf{Target}            & \textbf{Label}    & \textbf{One-Hot Encoded} \\ \midrule
+      \textbf{Litter-Type}       & bl-ln             & [1, 0, 1, 0, 0] \\% \midrule
+      \textbf{Understory-Type}   & shrub-broadleaf   & [0, 1, 0, 0, 0, 0, 0] \\% \midrule
+      \textbf{Tree-Species}      & beech-oak-pine    & [1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] \\ \bottomrule
+  \end{tabularx}
+  \space\label{tab:OneHot_Cat}
+\end{table}
+
+
+%%% Multicolum + Multirow Table
+\begin{table}[htbp]
+  \caption{Analyzed parameters/targets, separated by sampling method (Plot-wise, Transect-wise) and numerical feature type (Categorical [discrete], Quantitative [continuous]).}
+  \centering
+  \begin{tabularx}{\textwidth}{lXX}
+      \toprule
+      & \multicolumn{2}{c}{\textbf{Feature}} \\ 
+      & \multicolumn{1}{c}{Plot-wise} & \multicolumn{1}{c}{Transect-wise} \\
+      \midrule
+      \multirow{3}{*}{\textbf{Categorical}}  & \hfil Litter Type       &  \\ 
+                                              & \hfil Understory Type   &  \\
+                                              & \hfil Tree Species      &  \\
+      \midrule
+      \multirow{3}{*}{\textbf{Quantitative}} & \hfil Coverages         & \hfil Fine Woody Debris  \\ 
+                                              & \hfil Biomass           & \hfil              \\
+      \bottomrule
+  \end{tabularx}
+  \space\label{tab:Data_FeatureList} 
+\end{table}
+
+%% Teble to whole vertical page
+% \begin{landscape}
+%   %% insert table here
+% \end{landscape}
+
+
+Cite any table \tabref{tab:Data_FeatureList}
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%% Equations
+%%%%%%%%%%%%%%%%%%%%
+%%% Simple Equation
+\begin{equation}
+  Biomass = \beta 1 * {({RCD}^2 * Height)}^{\beta 2}  
+\end{equation}
+
+%%% Equation with Case Bracket
+\begin{equation}
+  Loss_{bce} = -\sum_{i=1}^{n}\log(q_{i})
+  \hspace{1cm}
+  \text{for } \hspace{0.3cm} q_{i} = 
+            \begin{cases} 
+                            pred_{i}   & \text{if } target_{i} = 1 \\
+                            1-pred_{i} & \text{if } target_{i} = 0
+            \end{cases}
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%
+%%% Equations
+%%%%%%%%%%%%%%%%%%%%
+%%% Code Block
+\begin{python}
+  def tensor_load_image(path_file, size):
+      img = tf.io.read_file(path_file)
+      img = tf.image.decode_image(img, channels=3, dtype=tf.float32)
+      img = tf.image.resize(img, (size, size))
+      return img
+  \end{python}
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%% Citations
+%%%%%%%%%%%%%%%%%%%%
+\space\cite{Bolte2006} % regular
+\citep{Keane2015} % parenthetical
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%% List
+%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+  \item Element 1
+  \item Element 2
+  \item Element 3
+\end{enumerate}

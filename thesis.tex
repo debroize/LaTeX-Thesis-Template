@@ -1,0 +1,254 @@
+\documentclass{thesisclass}
+
+%% -------------------------------
+%% |    ISSD Thesis Template       |
+%% -------------------------------
+%% Further additions by:
+%%   Philipp Stroehle, IM, 2013 
+%%   Jasper Feine, ISSD, 2018
+%%   Merlin Knaeble, ISSD, 2020-2022 
+%%   Denis Debroize, IFGG, 2023
+%% firstname.lastname "at" kit.edu
+
+%% Notes:
+%% Language switch after \begin{document}
+
+% Based on thesisclass.cls of Timo Rohrberg, 2009
+% ----------------------------------------------------------------
+% Thesis - Main document
+% ----------------------------------------------------------------
+
+\usepackage[english]{babel}
+\usepackage{csquotes}
+
+%% ---------------------------------
+%% |      Additional packages      |
+%% ---------------------------------
+%% 
+
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.svg}
+\graphicspath{{./figures/}} %Use curly braces for each path to add and do not forget trailing slash '/'
+% \usepackage{epstopdf} %Nice to automatically convert eps figures to pdf format  (from inkscape, etc)
+% \usepackage[style=apa, backend=biber, natbib=true, hyperref=true, uniquelist=true, language=american]{biblatex} % Original
+% \usepackage[style=authoryear, backend=bibtex, natbib=true, hyperref=true, uniquelist=true, language=american]{biblatex}
+\usepackage[style=authoryear, backend=bibtex, natbib=true, hyperref=true, uniquelist=true, language=american, backref=chapter]{biblatex}
+% \usepackage{biblatex}
+% \usepackage[style=authoryear]{biblatex}
+\addbibresource{thesis.bib}
+\usepackage{booktabs} % For nice tables
+
+%% ---------------------------------
+%% |      My packages      |
+%% ---------------------------------
+%%  
+\sloppy % For better line breaks
+% My packages
+\usepackage{charter} % For font Charter
+
+\usepackage{multicol} % Enables multiple columns
+
+\usepackage{scrhack} % to handle old scrbook functions (\float@addtolists detected)
+\usepackage{pgfplotstable}
+
+
+\usepackage{tabularx} % For table width (with {\textwidth} it fits horizontaly)
+\usepackage{threeparttable} % For table caption left align
+\usepackage{multirow} % for multirow tables
+\usepackage{rotating} % for table rotation
+\usepackage{subfloat}
+\usepackage{pdflscape}
+
+\usepackage{chngcntr} % Set Counter for figures and tables continuous (else they are resetted after each chapter)
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+
+\usepackage{caption} % For table caption left align
+\input{settings/caption_settings}
+\pgfplotsset{compat=1.16}
+
+\DeclareUnicodeCharacter{0327}{\ensuremath{}} % unknown error with unicode U+0327 is solved by this line
+
+
+\usepackage{svg} % For svg figures
+
+\usepackage{prettyref}
+\newrefformat{fig}{\textbf{Fig.}~\ref{#1}}
+
+
+\usepackage{url}
+\usepackage{breakurl}
+\usepackage{hyphenat}
+\usepackage{xurl}
+
+\usepackage{layouts}
+
+\usepackage[inline]{enumitem} % for horizontal lists
+\setlist[itemize]{itemjoin=\hspace*{\fill},itemjoin*=\hspace*{\fill}}
+
+
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+
+\usepackage{pythonhighlight}
+\usepackage{vwcol}  
+
+\usepackage{lipsum}
+
+
+
+
+%% ---------------------------------
+%% | Needed for the List of Abbreviations |
+%% ---------------------------------
+\usepackage{nomencl}
+\renewcommand{\nomname}{List of Abbreviations}
+\setlength{\nomlabelwidth}{.40\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature%
+\usepackage[normalem]{ulem}
+\newcommand{\markup}[1]{\uline{#1}}
+
+
+
+
+%% ---------------------------------
+%% | Information about the thesis  |
+%% ---------------------------------
+
+% uncomment one of the following, according to your thesis
+%\newcommand{\mytype}{Bachelor's Thesis} 
+\newcommand{\mytype}{Master's Thesis}
+%\newcommand{\mytype}{Seminar Thesis}
+
+\newcommand{\myname}{Your Name}
+\newcommand{\matricle}{Mail/ Matr. Nr./ etc.}
+\newcommand{\mytitle}{Your Title}
+%\newcommand{\mytitleger}{Deutscher Titel}
+\newcommand{\myinstitute}{Your Institution} %\\Information Systems I}
+
+
+\newcommand{\reviewerone}{Reviewer 1}
+\newcommand{\reviewertwo}{Reviewer 2}
+\newcommand{\advisor}{Advisor 1}
+\newcommand{\advisortwo}{Advisor 2}
+
+\newcommand{\submissiontime}{DD.MM.YYYY}
+
+%% -------------------------------
+%% |  Information for PDF file   |
+%% -------------------------------
+\hypersetup{
+ pdfauthor={\myname},
+ pdftitle={\mytitle},
+ pdfsubject={\mytype},
+ pdfkeywords={\mytype}
+}
+
+
+%% --------------------------------
+%% | Settings for word separation |
+%% --------------------------------
+% Describe separation hints here:
+\hyphenation{
+opos-sum
+he-lio-trope
+}
+
+
+%% ------------------------
+%% |    Including files   |
+%% ------------------------
+% Only files listed here will be included!
+% Userful command for partially translating the document (for bug-fixing e.g.)
+\includeonly{
+titlepage,
+text/my_abstract,
+text/00_eid_erklaerung,
+text/content,  %feel free to introduce additional files for structuring your thesis
+text/affidavit,
+text/prototype_agreement,
+text/appendix,
+settings,
+thesis,
+% Meine Files
+% text/d_01_einleitung,
+% text/d_05_diskussion
+text/chapters/03_methods_sub,
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Here, main documents begins %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{CharisSIL}
+\begin{document}
+% \changefont{CharisSIL}{m}{n}	% helvetica	(phv), % IM Style: palatino (ppl) 
+% \fontfamily{bitstream-charter}\selectfont
+% \fontfamily{T1/}\selectfont
+% \fontfamily{arev}\selectfont
+
+\frontmatter
+\hypersetup{pageanchor=false} % pageanchor=false is needed to avoid conflicts with abstact page number
+\include{titlepage}
+\hypersetup{pageanchor=true}
+\pagenumbering{roman}
+% \pagenumbering{empty}
+\include{text/my_abstract}
+% \include{text/00_eid_erklaerung}
+% \pagenumbering{roman}
+
+
+
+
+% ISSD Style: No additional blank page
+% \blankpage
+
+
+%% -------------------
+%% |   Directories   |
+%% -------------------
+\tableofcontents
+
+% ISSD Style: No additional blank page
+% \blankpaage
+
+% You may elect not to include a list of figures, list of tables and list of abbreviations, if the work is a seminar thesis (comment out the following)
+\listoffigures \addcontentsline{toc}{chapter}{List of Figures} 
+\listoftables  \addcontentsline{toc}{chapter}{List of Tables} 
+% \printnomenclature \addcontentsline{toc}{chapter}{List of Abbreviations} 
+
+
+%% -----------------
+%% |   Main part   |
+%% -----------------
+\mainmatter%
+\pagenumbering{arabic}
+\include{text/content}
+
+
+\backmatter%
+\pagenumbering{Roman}
+
+
+%% --------------------
+%% |   Bibliography   |
+%% --------------------
+
+\phantomsection%
+% \addcontentsline{toc}{chapter}{\bibname}
+
+\printbibliography%
+%% ----------------
+%% |   Appendix   |
+%% ----------------
+\hfil
+\captionsetup{list=no} % enable/disable list of figures/tables in appendix
+\input{text/appendix}
+
+% \include{text/affidavit}
+\include{text/00_eid_erklaerung}
+% \include{text/prototype_agreement}
+\end{document}

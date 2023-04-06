@@ -1,0 +1,129 @@
+\begin{multicols}{2}
+    
+    %% Stem Block
+    \begin{minipage}{\columnwidth}
+        \begin{figure}[H]
+        \begin{center}
+        \includegraphics[width= 0.85\columnwidth]{figures/appendix/TF_Inception_Stem.png}
+        % \caption{InceptionResNetV2 \textbf{Stem} block schema. ``V'' $\equiv$ valid padding.
+        \caption{InceptionResNetV2 \textbf{Stem} block schema. ``V'': valid padding.
+    % ~\citep*{TensorFlow}
+        \newline
+        \protect\hyperref[fig:Arch_IncRN2]{\textit{Return to text.}}}
+        \space\label{fig:IncRN2_Stem}
+        \end{center}
+        \end{figure}
+        \end{minipage}
+    
+    %% Stem Head
+    \begin{minipage}{\columnwidth}
+        \begin{figure}[H]
+        \begin{center}
+        \includegraphics[width= \columnwidth]{figures/appendix/TFInception_StemHead.png}
+        \caption{InceptionResNetV2 \textbf{Stem-Head} block schema.
+    % ~\citep*{TensorFlow}
+        \newline
+        \protect\hyperref[fig:Arch_IncRN2]{\textit{Return to text.}}}
+        \space\label{fig:IncRN2_StemHead}
+        \end{center}
+        \end{figure}
+        \end{minipage}
+        
+    %% IncRNA
+    \begin{minipage}{\columnwidth}
+        \begin{figure}[H]
+        \begin{center}
+        \includegraphics[width= \columnwidth]{figures/appendix/TFInception_IncRNA.png}
+        % \caption{The schema for 35×35 grid (\textbf{InceptionResNet-A}) module. ``L'' $\equiv$ linear activation. ``+'' $\equiv$ shortcut connection.
+        \caption{The schema for 35×35 grid (\textbf{InceptionResNet-A}) module. ``L'': linear activation; ``+'': shortcut connection.
+        % \caption{The schema for 35×35 grid (\textbf{InceptionResNet-A}) module.}
+    % ~\citep*{TensorFlow}
+        \newline
+        \protect\hyperref[fig:Arch_IncRN2]{\textit{Return to text.}}}
+        \space\label{fig:IncRN2_IncA}
+        \end{center}
+        \end{figure}
+        \end{minipage}
+    
+    % \end{multicols}
+    % \newpage
+    
+    % \begin{multicols}{2}
+    
+    %% RedA
+    \begin{minipage}{\columnwidth}
+        \begin{figure}[H]
+        \begin{center}
+        \includegraphics[width= \columnwidth]{figures/appendix/TFInception_RedA.png}
+        % \caption{The schema for 35×35 to 17×17 (\textbf{Reduction-A}) reduction module. ``V'' $\equiv$ valid padding.
+        \caption{The schema for 35×35 to 17×17 (\textbf{Reduction-A}) reduction module. ``V'': valid padding.
+    % ~\citep*{TensorFlow}
+        \newline
+        \protect\hyperref[fig:Arch_IncRN2]{\textit{Return to text.}}}
+        \space\label{fig:IncRN2_RedA}
+        \end{center}
+        \end{figure}
+        \end{minipage}
+    
+    %% IncRN_BC
+    % {0.5\textwidth}
+    \begin{minipage}{\columnwidth}
+        \begin{figure}[H]
+        \begin{center}
+        \includegraphics[width= \columnwidth]{figures/appendix/TFInception_IncRN_BC.png}
+        \caption{The schema for 17×17{\fontsize{12}{12}\selectfont \textbf{/}}\textit{8×8} grid (\textbf{InceptionResNet-B{\fontsize{12}{12}\selectfont \textbf{/}}\textit{-C}}) module. 
+        ``L'': linear activation; ``+'': shortcut connection.
+    % ~\citep*{TensorFlow}
+        \newline
+        \protect\hyperref[fig:Arch_IncRN2]{\textit{Return to text.}}}
+        \space\label{fig:IncRN2_IncBC}
+        \end{center}
+        \end{figure}
+        \end{minipage}
+    
+    %% RedB
+    \begin{minipage}{\columnwidth}
+        \begin{figure}[H]
+        \begin{center}
+        \includegraphics[width= \columnwidth]{figures/appendix/TFInception_RedB.png}
+        \caption{The schema for 17×17 to 8×8 (\textbf{Reduction-B}) reduction module. ``V'': valid padding.
+    % ~\citep*{TensorFlow}
+        \newline
+        \protect\hyperref[fig:Arch_IncRN2]{\textit{Return to text.}}}
+        \space\label{fig:IncRN2_RedB}
+        \end{center}
+        \end{figure}
+        % \vspace{15mm}
+        \end{minipage}   
+    
+    \end{multicols}
+    
+    %% Mobilenet Bottleneck
+    \begin{minipage}{\columnwidth}
+        \begin{figure}[H]
+        \begin{center}
+        \includegraphics[width= 0.4\columnwidth]{figures/appendix/MobileNet_Bottleneck.png}
+        \caption{MobileNetV2 \textbf{Bottleneck} block schema. 
+                 ``k'': input dimension; 
+                %  ``t'': expansion factor; ``n'': repetitions; 
+                %  ``c'': output channels; 
+                 ``L'': linear activation; ``+'': shortcut connection.
+                 Dashed line used if ``n'' $\geq$ 2 (in this case: ``s''$\leftarrow$1; ``c*t''= \textit{const.}).
+                %  \newline
+                %  Applied parameters for whole architecture in \prettyref{tab:Arch_Param_MobN2}.
+                 Applied parameters for whole architecture in~\tabref{tab:Arch_Param_MobN2}.
+                %  Because the expansion factor of the original architecture ``t'' is always 6, the other parameters can be derived from the output dimensions. (e.g. 150$\times$150$\times$96$\rightarrow$75$\times$75$\times$144 implies ``s''= 2 in the first block and further: ``k''= 96$\rightarrow$144; ``c''= 16$\rightarrow$24)
+                \newline
+                \protect\hyperref[fig:Arch_MobN2]{\textit{Return to text.}}
+                }
+                \space\label{fig:MobN2_Bot}
+        \end{center}
+        \end{figure}
+        % \vspace{15mm}
+        \end{minipage}   
+    
+    % Table
+    \input{tables/tex/Arch_MobileNetV2_table}
+    
+    % \fi
+    % \newpage

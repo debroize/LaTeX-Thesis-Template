@@ -1,0 +1,143 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Freeze + F1-Loss
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsubsection{Freezeless + F1-Loss}
+% ~\label{sec:MinorTests:sub:FreezlessF1}
+% \subsection{Freezeless}
+% ~\label{sec:MinorTests:sub:Freezeless}
+% %%%
+% %%%
+% In this section, two small tests are presented.
+% Firstly, a model that was trained for 80 epochs on iSet 2 with InceptionResNetV2 is further trained for 20 epochs, but during these epochs, the base model is opened for weight adaptation (\emph{unfreezed}).
+% The training curves (\prettyref{fig:Ap_Freezeless}) show, that this is an approach, that can improve the model further, but the gains in accuracy are that small, that it does not justify the additional training time. 
+% Also the increasing validation loss indicates that the risk of overfitting is rising.
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/appendix/minor_tests/longrun_iset2_inc_freezeless.pdf}
+%     % \subfigure[]{\label{fig:Ap_CollComp_Smpl_FinRes}\includegraphics[width=\textwidth]{figures/appendix/minor_tests/collcomp/longrun_collages_pivot.pdf}}
+    
+%     \caption{Freezless post-training of InceptionResNetV2 on iSet 2 classification.
+%             }
+%     \space\label{fig:Ap_Freezeless}
+% \end{figure}%
+
+
+\subsection{F1-Loss}
+~\label{sec:MinorTests:sub:F1}
+In this small test, it is investigated, if the replacement of the binary cross-entropy loss with the F1-score loss can improve the classification performance.
+The test is done with the MobileNetV2-SGD-64 configuration on iSet 2 and 8. 
+For comparison, the run with the binary cross-entropy loss is also presented in the plots of \prettyref{fig:Ap_F1}.
+The results show, that the F1-score loss is not able to improve the model performance.
+On iSet 8, the F1-score loss even leads to a lower accuracy.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/appendix/minor_tests/longrun_mob_f1.pdf}
+   
+    \caption{Comparison between binary cross-entropy (BCE) and F1-score loss training on MobileNetV2-SGD-64 on iSet 2 and 8.
+            }
+    \space\label{fig:Ap_F1}
+\end{figure}%
+
+
+
+The F1-score loss was implemented by:
+
+\begin{python}
+    @tf.function
+    def f1_loss(y_true, y_pred):
+        y_true = tf.cast(y_true, tf.float32)
+        y_pred = tf.cast(y_pred, tf.float32)
+        
+        # precision and recall
+        tp = tf.cast(tf.reduce_sum(y_pred * y_true), tf.float32)
+        fp = tf.cast(tf.reduce_sum(y_pred * (1 - y_true)), tf.float32)
+        fn = tf.cast(tf.reduce_sum((1 - y_pred) * y_true), tf.float32)
+        
+        epsilon = 1e-7
+        precision = tf.math.divide_no_nan(tp, tp + fp + epsilon)
+        recall = tf.math.divide_no_nan(tp, tp + fn + epsilon)
+
+        # Return the F1 score
+        f1_score = 2 * tf.math.divide_no_nan((precision * recall), 
+                                            (precision + recall) + epsilon)
+        return (1-f1_score)
+\end{python}
+
+
+\newpage
+\subsection{Freezeless}
+~\label{sec:MinorTests:sub:Freezeless}
+%%%
+%%%
+In this test, a model that was trained for 80 epochs on iSet 2 with InceptionResNetV2 is further trained for 20 epochs, but during these epochs, the base model is opened for weight adaptation (\emph{unfreezed}).
+The training curves (\prettyref{fig:Ap_Freezeless}) show, that this is an approach, that can improve the model further, but the gains in accuracy are that small, that it does not justify the additional training time. 
+Also the increasing validation loss indicates that the risk of overfitting is rising.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/appendix/minor_tests/longrun_iset2_inc_freezeless.pdf}
+    % \subfigure[]{\label{fig:Ap_CollComp_Smpl_FinRes}\includegraphics[width=\textwidth]{figures/appendix/minor_tests/collcomp/longrun_collages_pivot.pdf}}
+    
+    \caption{Freezless post-training of InceptionResNetV2 on iSet 2 classification.
+            }
+    \space\label{fig:Ap_Freezeless}
+\end{figure}%
+
+
+
+
+% This is a comparison between different image inputs for the classification task. 
+% Image types are: Standard images (``Std''), Golden Ratio collages (``GoRa''), Transect collages (``TrCol'') and Plot collages (``PlCol'').
+% Sample images of TrCol and PlCol in \prettyref{fig:Ap_CollComp_Smpl}.
+
+% %% Sample Images
+% \begin{multicols}{2}
+%     \begin{minipage}{\columnwidth}
+%         \begin{figure}[H]
+%             \vspace{2.1\baselineskip}
+%             \centering
+%             % TrCol + PlCol
+%             \subfigure[TrCol]{\label{fig:Ap_CollComp_Smpl_TrCol}\includegraphics[width=0.493\textwidth]{figures/appendix/minor_tests/collcomp/sampleimg/Collage_Pl_125_Tr_30.jpg}}
+%             \subfigure[PlCol]{\label{fig:Ap_CollComp_Smpl_PlCol}\includegraphics[width=0.493\textwidth]{figures/appendix/minor_tests/collcomp/sampleimg/Collage_Pl_125.jpg}}
+
+%             \vspace{1.78\baselineskip}
+%             \caption{Sample images for different image inputs.
+%                     }
+%             \space\label{fig:Ap_CollComp_Smpl}
+%         \end{figure}%
+%     \end{minipage}
+
+%     \begin{minipage}{\columnwidth}
+%         \begin{figure}[H]
+%             \centering
+%             \subfigure[]{\label{fig:Ap_CollComp_Smpl_FinRes}\includegraphics[width=\textwidth]{figures/appendix/minor_tests/collcomp/longrun_collages_pivot.pdf}}
+            
+%             \caption{Sample images for different image inputs.
+%                     }
+%             \space\label{fig:Ap_CollComp_FinRes}
+%         \end{figure}%
+%     \end{minipage}
+% \end{multicols}
+
+
+% Each training is done with the SGD optimizer and batch sizes of 64 (Std + GoRa) and 12 (TrCol + PlCol) over 60 epochs.
+% The final accuracy is visualized in \prettyref{fig:Ap_CollComp_FinRes} and the training curves are shown in \prettyref{fig:Ap_CollComp_TC}.
+
+
+% %% Training Curves
+% \begin{figure}[H]
+%     \centering
+%     %% Classification, iSet 2 
+%     \subfigure[VGG16]{\label{fig:Ap_CollComp_TC_VGG}\includegraphics[width=0.9\textwidth]{figures/appendix/minor_tests/collcomp/longrun_imgtype_vgg.pdf}}
+%     \subfigure[InceptionResNetV2]{\label{fig:Ap_CollComp_TC_Inc}\includegraphics[width=0.9\textwidth]{figures/appendix/minor_tests/collcomp/longrun_imgtype_inc.pdf}}
+%     \subfigure[MobileNetV2]{\label{fig:Ap_CollComp_TC_Mob}\includegraphics[width=0.9\textwidth]{figures/appendix/minor_tests/collcomp/longrun_imgtype_mob.pdf}}
+%     % \subfigure[PlCol]{\label{fig:Ap_CollComp_TC_PlCol}\includegraphics[width=\textwidth]{figures/appendix/minor_tests/collcomp/longrun_plotcol.pdf}}
+
+%     \caption{Training curves, comparison between image inputs.
+%             }
+%     \space\label{fig:Ap_CollComp_TC}
+% \end{figure}%
+

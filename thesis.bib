@@ -1,0 +1,627 @@
+@article{vombrocke2020special,
+  author    = {{vom Brocke}, Jan and Winter, Robert and Hevner, Alan and Maedche, Alexander},
+  year      = {2020},
+  title     = {Special Issue Editorial – Accumulation and Evolution of Design Knowledge in Design Science Research: A Journey Through Time and Space},
+  volume    = {21},
+  number    = {3},
+  pages     = {Article 9/520-544},
+  journal   = {Journal of the Association for Information Systems},
+  doi       = {10.17705/1jais.00611},
+  publisher = {{Association for Information Systems (AIS)}},
+  issn      = {1536-9323, 1558-3457},
+  language  = {english}
+}
+
+%%% ------------ %%%
+%%%     KIT      %%%
+%%% ------------ %%%
+
+@article{Labenski2022,
+   author = {Pia Labenski and Michael Ewald and Sebastian Schmidtlein and Fabian Ewald Fassnacht},
+   doi = {10.1016/j.jag.2022.102799},
+   issn = {15698432},
+   journal = {International Journal of Applied Earth Observation and Geoinformation},
+   month = {5},
+   pages = {102799},
+   publisher = {Elsevier BV},
+   title = {Classifying surface fuel types based on forest stand photographs and satellite time series using deep learning},
+   volume = {109},
+   year = {2022},
+}
+
+
+%%% ------------ %%%
+%%% Architecture %%%
+%%% ------------ %%%
+%% Architecture Original Paper
+% VGG16
+@article{Simonyan2014,
+  abstract = {In this work we investigate the effect of the convolutional network depth on its accuracy in the large-scale image recognition setting. Our main contribution is a thorough evaluation of networks of increasing depth using an architecture with very small (3x3) convolution filters, which shows that a significant improvement on the prior-art configurations can be achieved by pushing the depth to 16-19 weight layers. These findings were the basis of our ImageNet Challenge 2014 submission, where our team secured the first and the second places in the localisation and classification tracks respectively. We also show that our representations generalise well to other datasets, where they achieve state-of-the-art results. We have made our two best-performing ConvNet models publicly available to facilitate further research on the use of deep visual representations in computer vision.},
+  author   = {Karen Simonyan and Andrew Zisserman},
+  month    = {9},
+  title    = {Very Deep Convolutional Networks for Large-Scale Image Recognition},
+  url      = {http://arxiv.org/abs/1409.1556},
+  year     = {2014}
+}
+% InceptionResNetV2
+@report{Szegedy2016,
+  abstract = {Very deep convolutional networks have been central to the largest advances in image recognition performance in recent years. One example is the Inception architecture that has been shown to achieve very good performance at relatively low computational cost. Recently, the introduction of residual connections in conjunction with a more traditional architecture has yielded state-of-the-art performance in the 2015 ILSVRC challenge; its performance was similar to the latest generation Inception-v3 network. This raises the question of whether there are any benefit in combining the Inception architecture with residual connections. Here we give clear empirical evidence that training with residual connections accelerates the training of Inception networks significantly. There is also some evidence of residual Inception networks outperforming similarly expensive Inception networks without residual connections by a thin margin. We also present several new streamlined architectures for both residual and non-residual Inception networks. These variations improve the single-frame recognition performance on the ILSVRC 2012 classification task significantly. We further demonstrate how proper activation scaling stabilizes the training of very wide residual Inception networks. With an ensemble of three residual and one Inception-v4, we achieve 3.08% top-5 error on the test set of the ImageNet classification (CLS) challenge.},
+  author   = {Christian Szegedy and Sergey Ioffe and Vincent Vanhoucke and Alex Alemi},
+  isbn     = {1602.07261v2},
+  title    = {Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning},
+  year     = {2016}
+}
+
+% InceptionV1
+@inproceedings{Szegedy2015,
+   abstract = {We propose a deep convolutional neural network architecture codenamed Inception that achieves the new state of the art for classification and detection in the Im-ageNet Large-Scale Visual Recognition Challenge 2014 (ILSVRC14). The main hallmark of this architecture is the improved utilization of the computing resources inside the network. By a carefully crafted design, we increased the depth and width of the network while keeping the computational budget constant. To optimize quality, the architectural decisions were based on the Hebbian principle and the intuition of multi-scale processing. One particular in-carnation used in our submission for ILSVRC14 is called GoogLeNet, a 22 layers deep network, the quality of which is assessed in the context of classification and detection.},
+   author = {Christian Szegedy and Wei Liu and Yangqing Jia and Pierre Sermanet and Scott Reed and Dragomir Anguelov and Dumitru Erhan and Vincent Vanhoucke and Andrew Rabinovich},
+   title = {Going Deeper with Convolutions},
+   year = {2015},
+}
+
+
+% ResNet
+@report{He2016,
+   abstract = {Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers-8× deeper than VGG nets [40] but still having lower complexity. An ensemble of these residual nets achieves 3.57% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central importance for many visual recognition tasks. Solely due to our extremely deep representations, we obtain a 28% relative improvement on the COCO object detection dataset. Deep residual nets are foundations of our submissions to ILSVRC & COCO 2015 competitions 1 , where we also won the 1st places on the tasks of ImageNet detection, ImageNet local-ization, COCO detection, and COCO segmentation.},
+   author = {Kaiming He and Xiangyu Zhang and Shaoqing Ren and Jian Sun},
+   title = {Deep Residual Learning for Image Recognition},
+   url = {http://image-net.org/challenges/LSVRC/2015/},
+   year = {2016},
+}
+
+
+
+% MobileNetV2
+@article{Sandler2018,
+  abstract = {In this paper we describe a new mobile architecture, MobileNetV2, that improves the state of the art performance of mobile models on multiple tasks and benchmarks as well as across a spectrum of different model sizes. We also describe efficient ways of applying these mobile models to object detection in a novel framework we call SSDLite. Additionally, we demonstrate how to build mobile semantic segmentation models through a reduced form of DeepLabv3 which we call Mobile DeepLabv3. The MobileNetV2 architecture is based on an inverted residual structure where the input and output of the residual block are thin bottleneck layers opposite to traditional residual models which use expanded representations in the input an MobileNetV2 uses lightweight depthwise convolutions to filter features in the intermediate expansion layer. Additionally, we find that it is important to remove non-linearities in the narrow layers in order to maintain representational power. We demonstrate that this improves performance and provide an intuition that led to this design. Finally, our approach allows decoupling of the input/output domains from the expressiveness of the transformation, which provides a convenient framework for further analysis. We measure our performance on Imagenet classification, COCO object detection, VOC image segmentation. We evaluate the trade-offs between accuracy, and number of operations measured by multiply-adds (MAdd), as well as the number of parameters},
+  author   = {Mark Sandler and Andrew Howard and Menglong Zhu and Andrey Zhmoginov and Liang-Chieh Chen},
+  month    = {1},
+  title    = {MobileNetV2: Inverted Residuals and Linear Bottlenecks},
+  url      = {http://arxiv.org/abs/1801.04381},
+  year     = {2018}
+}
+
+% MobileNetV1
+@article{Howard2017,
+   abstract = {We present a class of efficient models called MobileNets for mobile and embedded vision applications. MobileNets are based on a streamlined architecture that uses depth-wise separable convolutions to build light weight deep neural networks. We introduce two simple global hyper-parameters that efficiently trade off between latency and accuracy. These hyper-parameters allow the model builder to choose the right sized model for their application based on the constraints of the problem. We present extensive experiments on resource and accuracy tradeoffs and show strong performance compared to other popular models on ImageNet classification. We then demonstrate the effectiveness of MobileNets across a wide range of applications and use cases including object detection, finegrain classification, face attributes and large scale geo-localization.},
+   author = {Andrew G. Howard and Menglong Zhu and Bo Chen and Dmitry Kalenichenko and Weijun Wang and Tobias Weyand and Marco Andreetto and Hartwig Adam},
+   month = {4},
+   title = {MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications},
+   url = {http://arxiv.org/abs/1704.04861},
+   year = {2017},
+}
+
+
+
+%% Architecture Comparison
+@article{Bianco2018,
+  abstract = {This work presents an in-depth analysis of the majority of the deep neural networks (DNNs) proposed in the state of the art for image recognition. For each DNN multiple performance indices are observed, such as recognition accuracy, model complexity, computational complexity, memory usage, and inference time. The behavior of such performance indices and some combinations of them are analyzed and discussed. To measure the indices we experiment the use of DNNs on two different computer architectures, a workstation equipped with a NVIDIA Titan X Pascal and an embedded system based on a NVIDIA Jetson TX1 board. This experimentation allows a direct comparison between DNNs running on machines with very different computational capacity. This study is useful for researchers to have a complete view of what solutions have been explored so far and in which research directions are worth exploring in the future; and for practitioners to select the DNN architecture(s) that better fit the resource constraints of practical deployments and applications. To complete this work, all the DNNs, as well as the software used for the analysis, are available online.},
+  author   = {Simone Bianco and Remi Cadene and Luigi Celona and Paolo Napoletano},
+  doi      = {10.1109/ACCESS.2018.2877890},
+  month    = {10},
+  title    = {Benchmark Analysis of Representative Deep Neural Network Architectures},
+  url      = {http://arxiv.org/abs/1810.00736 http://dx.doi.org/10.1109/ACCESS.2018.2877890},
+  year     = {2018}
+}
+
+@book{Chollet2018,
+  abstract = {Deep Learning with Python introduces the field of deep learning using the Python language and the powerful Keras library. Written by Keras creator and Google AI researcher François Chollet, this book builds your understanding through intuitive explanations and practical examples. You'll explore challenging concepts and practice with applications in computer vision, natural-language processing, and generative models. By the time you finish, you'll have the knowledge and hands-on skills to apply deep learning in your own projects. -- Part 1: Fundamentals of deep learning. What is deep learning? -- Before we begin: the mathematical building blocks of neural networks -- Getting started with neural networks -- Fundamentals of machine learning -- Part 2: Deep learning in practice. Deep learning for computer vision -- Deep learning for text and sequences -- Advanced deep-learning best practices -- Generative deep learning.},
+  author   = {François Chollet},
+  isbn     = {9781617294433},
+  pages    = {361},
+  title    = {Deep learning with Python},
+  year     = {2018}
+}
+
+%% VGG16 Related Work
+% Biomass Regression 
+@article{Zheng2022,
+  abstract  = { Modeling plant canopy biophysical parameters at the individual plant level remains a major challenge. This study presents a workflow for automatic strawberry canopy delineation and biomass prediction from high-resolution images using deep neural networks. High-resolution (5 mm) RGB orthoimages, near-infrared (NIR) orthoimages, and Digital Surface Models (DSM), which were generated by Structure from Motion (SfM), were utilized in this study. Mask R-CNN was applied to the orthoimages of two band combinations (RGB and RGB-NIR) to identify and delineate strawberry plant canopies. The average detection precision rate and recall rate were 97.28% and 99.71% for RGB images and 99.13% and 99.54% for RGB-NIR images, and the mean intersection over union ( mIoU ) rates for instance segmentation were 98.32% and 98.45% for RGB and RGB-NIR images, respectively. Based on the center of the canopy mask, we imported the cropped RGB, NIR, DSM, and mask images of individual plants to vanilla deep regression models to model canopy leaf area and dry biomass. Two networks (VGG-16 and ResNet-50) were used as the backbone architecture for feature map extraction. The    R   2    values of dry biomass models were about 0.76 and 0.79 for the VGG-16 and ResNet-50 networks, respectively. Similarly, the    R   2    values of leaf area were 0.82 and 0.84, respectively. The RMSE values were approximately 8.31 and 8.73 g for dry biomass analyzed using the VGG-16 and ResNet-50 networks, respectively. Leaf area RMSE was 0.05 m 2 for both networks. This work demonstrates the feasibility of deep learning networks in individual strawberry plant extraction and biomass estimation. },
+  author    = {Caiwang Zheng and Amr Abd-Elrahman and Vance M. Whitaker and Cheryl Dalid},
+  doi       = {10.34133/2022/9850486},
+  issn      = {26436515},
+  journal   = {Plant Phenomics},
+  month     = {10},
+  pages     = {1-17},
+  publisher = {American Association for the Advancement of Science (AAAS)},
+  title     = {Deep Learning for Strawberry Canopy Delineation and Biomass Prediction from High-Resolution Images},
+  volume    = {2022},
+  year      = {2022}
+}
+% Biomass Regression 
+@article{Narayanan2021,
+  abstract = {The dairy industry uses clover and grass as fodder for cows. Accurate estimation of grass and clover biomass yield enables smart decisions in optimizing fertilization and seeding density, resulting in increased productivity and positive environmental impact. Grass and clover are usually planted together, since clover is a nitrogen-fixing plant that brings nutrients to the soil. Adjusting the right percentages of clover and grass in a field reduces the need for external fertilization. Existing approaches for estimating the grass-clover composition of a field are expensive and time consuming - random samples of the pasture are clipped and then the components are physically separated to weigh and calculate percentages of dry grass, clover and weeds in each sample. There is growing interest in developing novel deep learning based approaches to non-destructively extract pasture phenotype indicators and biomass yield predictions of different plant species from agricultural imagery collected from the field. Providing these indicators and predictions from images alone remains a significant challenge. Heavy occlusions in the dense mixture of grass, clover and weeds make it difficult to estimate each component accurately. Moreover, although supervised deep learning models perform well with large datasets, it is tedious to acquire large and diverse collections of field images with precise ground truth for different biomass yields. In this paper, we demonstrate that applying data augmentation and transfer learning is effective in predicting multi-target biomass percentages of different plant species, even with a small training dataset. The scheme proposed in this paper used a training set of only 261 images and provided predictions of biomass percentages of grass, clover, white clover, red clover, and weeds with mean absolute error of 6.77%, 6.92%, 6.21%, 6.89%, and 4.80% respectively.},
+  author   = {Badri Narayanan and Mohamed Saadeldin and Paul Albert and Kevin McGuinness and Brian Mac Namee},
+  month    = {1},
+  title    = {Extracting Pasture Phenotype and Biomass Percentages using Weakly Supervised Multi-target Deep Learning on a Small Dataset},
+  url      = {http://arxiv.org/abs/2101.03198},
+  year     = {2021}
+}
+% Biomass Regression Inception + MobileNet
+@inproceedings{OByrne2021,
+  abstract  = {In precision agriculture, having knowledge of pastureland forage biomass and moisture content prior to an ensiling process enables pastoralists to enhance silage production.While traditional trait measurement estimation methods relied on hand-crafted vegetation indices, manual measurements, or even destructive methods, remote sensing technology coupled with state-of-the-art deep learning algorithms can enable estimation using a broader spectrum of data, but generally require large volumes of labelled data, which is lacking in this domain. This work investigates the performance of a range of deep learning algorithms on a small dataset for biomass and moisture estimation that was collected with a compact remote sensing system designed to work in real time. Our results showed that applying transfer learning to Inception ResNet improved minimum mean average percentage error from 45.58% on a basic CNN, to 28.07% on biomass, and from 29.33% to 8.03% on moisture content. From scratch models and models optimised for mobile remote sensing applications (MobileNet) failed to produce the same level of improvement.},
+  author    = {Patricia O'Byrne and Patrick Jackman and Damon Berry and Hector Hugo Franco-Peña and Michael French and Robert J. Ross},
+  doi       = {10.1109/IGARSS47720.2021.9553222},
+  isbn      = {9781665403696},
+  journal   = {International Geoscience and Remote Sensing Symposium (IGARSS)},
+  keywords  = {Grassland biomass,Inception ResNet,MobileNet,Proximal sensing,Transfer learning},
+  pages     = {4620-4623},
+  publisher = {Institute of Electrical and Electronics Engineers Inc.},
+  title     = {TRANSFER LEARNING PERFORMANCE FOR REMOTE PASTURELAND TRAIT ESTIMATION IN REAL-TIME FARM MONITORING},
+  volume    = {2021-July},
+  year      = {2021}
+}
+
+
+% Forest Fire Segmentation
+@article{Wang2022,
+  abstract  = {In recent years, frequent forest fires have plagued countries all over the world, causing serious economic damage and human casualties. Faster and more accurate detection of forest fires and timely interventions have become a research priority. With the advancement in deep learning, fully convolutional network architectures have achieved excellent results in the field of image segmentation. More researchers adopt these models to segment flames for fire monitoring, but most of the works are aimed at fires in buildings and industrial scenarios. However, there are few studies on the application of various fully convolutional models to forest fire scenarios, and comparative experiments are inadequate. In view of the above problems, on the basis of constructing the dataset with remote-sensing images of forest fires captured by unmanned aerial vehicles (UAVs) and the targeted optimization of the data enhancement process, four classical semantic segmentation models and two backbone networks are selected for modeling and testing analysis. By comparing inference results and the evaluation indicators of models such as mPA and mIoU, we can find out the models that are more suitable for forest fire segmentation scenarios. The results show that the U-Net model with Resnet50 as a backbone network has the highest segmentation accuracy of forest fires with the best comprehensive performance, and is more suitable for scenarios with high-accuracy requirements; the DeepLabV3+ model with Resnet50 is slightly less accurate than U-Net, but it can still ensure a satisfying segmentation performance with a faster running speed, which is suitable for scenarios with high real-time requirements. In contrast, FCN and PSPNet have poorer segmentation performance and, hence, are not suitable for forest fire detection scenarios.},
+  author    = {Ziqi Wang and Tao Peng and Zhaoyou Lu},
+  doi       = {10.3390/f13071133},
+  issn      = {19994907},
+  issue     = {7},
+  journal   = {Forests},
+  keywords  = {deep learning,flame segmentation,forest fires,image processing,neural network},
+  month     = {7},
+  publisher = {MDPI},
+  title     = {Comparative Research on Forest Fire Image Segmentation Algorithms Based on Fully Convolutional Neural Networks},
+  volume    = {13},
+  year      = {2022}
+}
+% Forest Fire and Smoke Detection
+@article{Mohammed2022,
+  abstract = {Large parts of the world's forests are threatened by fires. These fires happen continuously every month around the globe. They are very costly to society and cause serious damage to the ecosystem. This raises the necessity to build a detection system to intervene early and take action. Fire and smoke have various colours, textures, and shapes, which are challenging to detect. In the modern world, neural networks are used extensively in most fields of human activities. For the detection of fire and smoke, we suggest a deep learning technology using transfer learning to extract features of forest fire and smoke. We used a pre-trained Inception-ResNet-v2 network on the ImageNet dataset to be trained on our dataset which consists of 1,102 images for each fire and smoke class. The classification accuracy, precision, recall, F1-Score, and specificity were 99.09%, 100%, 98.08%, 99.09%, and 98.30%, respectively. This model has been deployed on a Raspberry Pi device with a camera. For real-time detection, we used the Open CV library to read the camera stream frame by frame and predict the probability of fire or smoke.},
+  author   = {Raghad K Mohammed},
+  doi      = {10.22075/ijnaa.2022.5899},
+  journal  = {Int. J. Nonlinear Anal. Appl},
+  keywords = {Convolutional neural networks,deep learning,fire detection,object detection,smoke detection,transfer learning},
+  pages    = {2008-6822},
+  title    = {A real-time forest fire and smoke detection system using deep learning},
+  volume   = {13},
+  url      = {http://dx.},
+  year     = {2022}
+}
+
+@inproceedings{Harkat2021,
+  abstract  = {Fire detection is high priority task in the current decade, due to the high occurrences of fire in urban and forest area. Every year, millions of hectares of forests are burned and destroyed. The cost of dislocation could be optimized by implementing an accurate detection system. In this paper a Deeplabv3+ model with a Mobilenetv2 backbone is implemented and tested over R GB and Infrared pictures of the Corsican french dataset. Three different types of loss function were used to overcome the problem of unbalanced dataset. The results obtained with the model herein presented are very encouraging.},
+  author    = {Houda Harkat and Jose M.P. Nascimento and Alexandre Bernardino},
+  doi       = {10.1109/IGARSS47720.2021.9553141},
+  isbn      = {9781665403696},
+  journal   = {International Geoscience and Remote Sensing Symposium (IGARSS)},
+  keywords  = {Corsican french dataset,Deeplabv3+,Detection system,Fire,Mobilinetv2},
+  pages     = {4095-4098},
+  publisher = {Institute of Electrical and Electronics Engineers Inc.},
+  title     = {FIRE DETECTION USING DEEPLABV3+ WITH MOBILENETV2},
+  volume    = {2021-July},
+  year      = {2021}
+}
+
+
+@article{Khan2022,
+  abstract  = {Forests are a vital natural resource that directly influences the ecosystem. Recently, forest fire has been a serious issue due to natural and man-made climate effects. For early forest fire detection, an artificial intelligence-based forest fire detection method in smart city application is presented to avoid major disasters. This research presents a review of the vision-based forest fire localization and classification methods. Furthermore, this work makes use of the forest fire detection dataset, which solves the classification problem of discriminating fire and no-fire images. This work proposes a deep learning method named FFireNet, by leveraging the pre-trained convolutional base of the MobileNetV2 model and adding fully connected layers to solve the new task, that is, the forest fire recognition problem, which helps in classifying images as forest fires based on extracted features which are symmetrical. The performance of the proposed solution for classifying fire and no-fire was evaluated using different performance metrics and compared with other CNN models. The results show that the proposed approach achieves 98.42% accuracy, 1.58% error rate, 99.47% recall, and 97.42% precision in classifying the fire and no-fire images. The outcomes of the proposed approach are promising for the forest fire classification problem considering the unique forest fire detection dataset.},
+  author    = {Somaiya Khan and Ali Khan},
+  doi       = {10.3390/sym14102155},
+  issn      = {20738994},
+  issue     = {10},
+  journal   = {Symmetry},
+  keywords  = {artificial intelligence,deep learning,forest fire classification,smart city application},
+  month     = {10},
+  publisher = {MDPI},
+  title     = {FFireNet: Deep Learning Based Forest Fire Classification and Detection in Smart Cities},
+  volume    = {14},
+  year      = {2022}
+}
+
+
+
+% Tree Spec Classification
+@report{Rezaee2018,
+  abstract = {Acquiring information about forest stands such as individual tree species is crucial for monitoring forests. To date, such information is assessed by human interpreters using airborne or an Unmanned Aerial Vehicle (UAV), which is time/cost consuming. The recent advancement in remote sensing image acquisition, such as WorldView-3, has increased the spatial resolution up to 30 cm and spectral resolution up to 16 bands. This advancement has significantly increased the potential for Individual Tree Species Detection (ITSD). In order to use the single source Worldview-3 images, our proposed method first segments the image to delineate trees, and then detects trees using a VGG-16 network. We developed a pipeline for feeding the deep CNN network using the information from all the 8 visible-near infrareds' bands and trained it. The result is compared with two state-of-the-art ensemble classifiers namely Random Forest (RF) and Gradient Boosting (GB). Results demonstrate that the VGG-16 outperforms all the other methods reaching an accuracy of about 92.13%.},
+  author   = {Mohammad Rezaee and Yun Zhang and Rakesh Mishra and Fei Tong and Hengjian Tong},
+  journal  = {2018 10th IAPR Workshop on Pattern Recognition in Remote Sensing (PRRS)},
+  keywords = {Convolutional Neural Network,Deep Learning,Gradient Boosting,Individual Tree Species Detection,Random Forest,VGG-16},
+  title    = {Using a VGG-16 Network for Individual Tree Species Detection with an Object-Based Approach; Using a VGG-16 Network for Individual Tree Species Detection with an Object-Based Approach},
+  year     = {2018}
+}
+% Tree Spec Classification
+@article{Sun2019,
+  abstract  = {The monitoring of tree species diversity is important for forest or wetland ecosystem service maintenance or resource management. Remote sensing is an efficient alternative to traditional field work to map tree species diversity over large areas. Previous studies have used light detection and ranging (LiDAR) and imaging spectroscopy (hyperspectral or multispectral remote sensing) for species richness prediction. The recent development of very high spatial resolution (VHR) RGB images has enabled detailed characterization of canopies and forest structures. In this study, we developed a three-step workflow for mapping tree species diversity, the aim of which was to increase knowledge of tree species diversity assessment using deep learning in a tropical wetland (HaizhuWetland) in South China based on VHR-RGB images and LiDAR points. Firstly, individual trees were detected based on a canopy height model (CHM, derived from LiDAR points) by the local-maxima-based method in the FUSION software (Version 3.70, Seattle, USA). Then, tree species at the individual tree level were identified via a patch-based image input method, which cropped the RGB images into small patches (the individually detected trees) based on the tree apexes detected. Three different deep learning methods (i.e., AlexNet, VGG16, and ResNet50) were modified to classify the tree species, as they can make good use of the spatial context information. Finally, four diversity indices, namely, the Margalef richness index, the Shannon-Wiener diversity index, the Simpson diversity index, and the Pielou evenness index, were calculated from the fixed subset with a size of 30 x 30 m for assessment. In the classification phase, VGG16 had the best performance, with an overall accuracy of 73.25% for 18 tree species. Based on the classification results, mapping of tree species diversity showed reasonable agreement with field survey data (R2Margalef = 0.4562, root-mean-square error RMSEMargalef = 0.5629; R2Shannon-Wiener = 0.7948, RMSEShannon-Wiener = 0.7202; R2Simpson = 0.7907, RMSESimpson = 0.1038; and R2Pielou = 0.5875, RMSEPielou = 0.3053). While challenges remain for individual tree detection and species classification, the deep-learning-based solution shows potential for mapping tree species diversity.},
+  author    = {Ying Sun and Jianfeng Huang and Zurui Ao and Dazhao Lao and Qinchuan Xin},
+  doi       = {10.3390/F10111047},
+  issn      = {19994907},
+  issue     = {11},
+  journal   = {Forests},
+  keywords  = {Deep learning,High-resolution remote sensing images,Individual tree level,LiDAR,Tree species diversity,Tropical wetland},
+  month     = {11},
+  publisher = {MDPI AG},
+  title     = {Deep learning approaches for the mapping of tree species diversity in a tropical wetland using airborne LiDAR and high-spatial-resolution remote sensing images},
+  volume    = {10},
+  year      = {2019}
+}
+
+% Plant Species Classification
+@article{VanHieu2020,
+  abstract = {It is complicated to distinguish among thousands of plant species in the natural ecosystem, and many efforts have been investigated to address the issue. In Vietnam, the task of identifying one from 12,000 species requires specialized experts in flora management, with thorough training skills and in-depth knowledge. Therefore, with the advance of machine learning, automatic plant identification systems have been proposed to benefit various stakeholders, including botanists, pharmaceutical laboratories, taxonomists, forestry services, and organizations. The concept has fueled an interest in research and application from global researchers and engineers in both fields of machine learning and computer vision. In this paper, the Vietnamese plant image dataset was collected from an online encyclopedia of Vietnamese organisms, together with the Encyclopedia of Life, to generate a total of 28,046 environmental images of 109 plant species in Vietnam. A comparative evaluation of four deep convolutional feature extraction models, which are MobileNetV2, VGG16, ResnetV2, and Inception Resnet V2, is presented. Those models have been tested on the Support Vector Machine (SVM) classifier to experiment with the purpose of plant image identification. The proposed models achieve promising recognition rates, and MobilenetV2 attained the highest with 83.9%. This result demonstrates that machine learning models are potential for plant species identification in the natural environment, and future works need to examine proposing higher accuracy systems on a larger dataset to meet the current application demand.},
+  author   = {Nguyen Van Hieu and Ngo Le and Huy Hien},
+  issn     = {2231-5381},
+  journal  = {International Journal of Engineering Trends and Technology},
+  keywords = {Plant identification,convolutional neural network,deep learning models,support vector machine},
+  title    = {Automatic Plant Image Identification of Vietnamese species using Deep Learning Models},
+  volume   = {68},
+  url      = {http://www.ijettjournal.org},
+  year     = {2020}
+}
+
+@inproceedings{Malik2021,
+  abstract  = {Automated plant species identification for the datasets (images) collected from the natural environment is a challenging task. This study investigates the development and application of ensemble deep learning models for fine-grained plant species identification. Two different types of plant species datasets have been used in this study. The first dataset (UBD_45) consists of 45 medicinal plant species from the natural environment with the imbalanced distribution of classes and the second dataset (VP_200) has 200 medicinal plant species with balanced classes from the natural environment. Six popular deep learning models (InceptionResNetV2, ResNet50, Xception, InceptionV3, MobileNetV2, and GoogleNet) were trained on both datasets and heterogeneous ensembles with various ensemble techniques (mean, weighted mean, voting, and stacked generalization) were performed. The validation and testing accuracy results for individual models were compared with the output generated by the ensemble methods. The highest testing accuracies for base models were found 96.7% and 91.2% for UBD_45 and VP_200 datasets, respectively. Mean, weighted mean, and stacking ensembles showed better performance for both datasets. The stacking ensemble improved the classification accuracy by around 1.8% for the UBD_45 dataset while for VP_200 a significant improvement of around 4.23% was noticed using a weighted mean ensemble.},
+  author    = {Owais Ahmed Malik and Muhammad Faisal and Burhan Rashid Hussein},
+  doi       = {10.1109/CSDE53843.2021.9718387},
+  isbn      = {9781665495523},
+  journal   = {2021 IEEE Asia-Pacific Conference on Computer Science and Data Engineering, CSDE 2021},
+  keywords  = {Deep learning,computer vision,convolutional neural networks,ensemble learning,plant species identification},
+  publisher = {Institute of Electrical and Electronics Engineers Inc.},
+  title     = {Ensemble Deep Learning Models for Fine-grained Plant Species Identification},
+  year      = {2021}
+}
+
+% Fruit Classification
+@inproceedings{Xiang2019,
+  abstract  = {Fruit image classification is the key technology for robotic picking which can tremendously save costs and effectively improve fruit producer's competitiveness in the international fruit market. In the image classification field, deep learning technologies especially DCNNs are state-of-the-art technologies and have achieved remarkable success. But the requirements of high computation and storage resources prohibit the usages of DCNNs on resource-limited environments such as automatic harvesting robots. Therefore, we need to choose a lightweight neural network to achieve the balance of resource limitations and recognition accuracy. In this paper, a fruit image classification method based on a lightweight neural network MobileNetV2 with transfer learning technique was used to recognize fruit images. We used a MobileNetV2 network pretrained by ImageNet dataset as a base network and then replace the top layer of the base network with a conventional convolution layer and a Softmax classifier. We applied dropout to the new-added conv2d at the same time to reduce overfitting. The pre-trained MobileNetV2 was used to extract features and the Softmax classifier was used to classify features. We trained this new model in two stages using Adam optimizer of different learning rate. This method finally achieved a classification accuracy of 85.12% in our fruit image dataset including 3670 images of 5 fruits. Compared with other network such as MobileNetV1, InceptionV3 and DenseNet121, this hybrid network implemented by Google open source deep learning framework Tensorflow can make a good compromise between accuracy and speed. Since MobileNetV2 is a lightweight neural network, the method in this paper can be deployed in low-power and limited-computing devices such as mobile phone.},
+  author    = {Qian Xiang and Guoling Zhang and Xiaodan Wang and Jie Lai and Rui Li and Qingshuang Hu},
+  doi       = {10.1145/3331453.3361658},
+  isbn      = {9781450362948},
+  journal   = {ACM International Conference Proceeding Series},
+  keywords  = {Depth separable convolutions,Fruit image classification,MobileNetV2,Transfer learning},
+  month     = {10},
+  publisher = {Association for Computing Machinery},
+  title     = {Fruit image classification based on Mobilenetv2 with transfer learning technique},
+  year      = {2019}
+}
+
+% Soy Maturity
+@article{Zhang2022,
+  abstract = {Citation: Zhang, S.; Feng, H.; Han, S.; Shi, Z.; Xu, H.; Liu, Y.; Feng, H.; Zhou, C.; Yue, J. Monitoring of Soybean Maturity Using UAV Remote Sensing and Deep Learning. Agriculture 2023, 13, 110. https:// Abstract: Soybean breeders must develop early-maturing, standard, and late-maturing varieties for planting at different latitudes to ensure that soybean plants fully utilize solar radiation. Therefore, timely monitoring of soybean breeding line maturity is crucial for soybean harvesting management and yield measurement. Currently, the widely used deep learning models focus more on extracting deep image features, whereas shallow image feature information is ignored. In this study, we designed a new convolutional neural network (CNN) architecture, called DS-SoybeanNet, to improve the performance of unmanned aerial vehicle (UAV)-based soybean maturity information monitoring. DS-SoybeanNet can extract and utilize both shallow and deep image features. We used a high-definition digital camera on board a UAV to collect high-definition soybean canopy digital images. A total of 2662 soybean canopy digital images were obtained from two soybean breeding fields (fields F1 and F2). We compared the soybean maturity classification accuracies of (i) conventional machine learning methods (support vector machine (SVM) and random forest (RF)), (ii) current deep learning methods (InceptionResNetV2, MobileNetV2, and ResNet50), and (iii) our proposed DS-SoybeanNet method. Our results show the following: (1) The conventional machine learning methods (SVM and RF) had faster calculation times than the deep learning methods (InceptionResNetV2, MobileNetV2, and ResNet50) and our proposed DS-SoybeanNet method. For example, the computation speed of RF was 0.03 s per 1000 images. However, the conventional machine learning methods had lower overall accuracies (field F2: 63.37-65.38%) than the proposed DS-SoybeanNet (Field F2: 86.26%). (2) The performances of the current deep learning and conventional machine learning methods notably decreased when tested on a new dataset. For example, the overall accuracies of MobileNetV2 for fields F1 and F2 were 97.52% and 52.75%, respectively. (3) The proposed DS-SoybeanNet model can provide high-performance soybean maturity classification results. It showed a computation speed of 11.770 s per 1000 images and overall accuracies for fields F1 and F2 of 99.19% and 86.26%, respectively.},
+  author   = {Shanxin Zhang and Hao Feng and Shaoyu Han and Zhengkai Shi and Haoran Xu and Yang Liu and Haikuan Feng and Chengquan Zhou and Jibo Yue},
+  doi      = {10.3390/agriculture},
+  keywords = {convolutional neural network,deep learning,soybean,unmanned aerial vehicle},
+  title    = {Monitoring of Soybean Maturity Using UAV Remote Sensing and Deep Learning},
+  url      = {https://doi.org/10.3390/agriculture13010110},
+  year     = {2022}
+}
+
+%% Datasets
+% ImageNet
+@article{ILSVRC15,
+Author = {Olga Russakovsky and Jia Deng and Hao Su and Jonathan Krause and Sanjeev Satheesh and Sean Ma and Zhiheng Huang and Andrej Karpathy and Aditya Khosla and Michael Bernstein and Alexander C. Berg and Li Fei-Fei},
+Title = {ImageNet Large Scale Visual Recognition Challenge},
+Year = {2015},
+journal   = {International Journal of Computer Vision (IJCV)},
+doi = {10.1007/s11263-015-0816-y},
+volume={115},
+number={3},
+pages={211-252}
+}
+
+
+%%% ------------ %%%
+%%%    Forest    %%%
+%%% ------------ %%%
+@report{Woodall2008,
+   author = {Christopher William Woodall and Vicente J. Monleon},
+   title = {Sampling Protocol, Estimation, and Analysis Procedures for the Down Woody Materials Indicator of the FIA Program},
+   url = {https://www.researchgate.net/publication/265028946},
+   year = {2008},
+}
+
+@book{Keane2015,
+   abstract = {A new era in wildland fuel sciences is now evolving in such a way that fire scientists and managers need a comprehensive understanding of fuels ecology and science to fully understand fire effects and behavior on diverse ecosystem and landscape characteristics. This is a reference book on wildland fuel science; a book that describes fuels and their application in land management. There has never been a comprehensive book on wildland fuels; most wildland fuel information was put into wildland fire science and management books as separate chapters and sections. This book is the first to highlight wildland fuels and treat them as a natural resource rather than a fire behavior input. Moreover, there has never been a comprehensive description of fuels and their ecology, measurement, and description under one reference; most wildland fuel information is scattered across diverse and unrelated venues from combustion science to fire ecology to carbon dynamics. The literature and data for wildland fuel science has never been synthesized into one reference; most studies were done for diverse and unique objectives. This book is the first to link the disparate fields of ecology, wildland fire, and carbon to describe fuel science. This just deals with the science and ecology of wildland fuels, not fuels management. However, since expensive fuel treatments are being planned in fire dominated landscapes across the world to minimize fire damage to people, property and ecosystems, it is incredibly important that people understand wildland fuels to develop more effective fuel management activities.},
+   author = {Robert E. Keane},
+   doi = {10.1007/978-3-319-09015-3},
+   isbn = {9783319090153},
+   journal = {Wildland Fuel Fundamentals and Applications},
+   month = {1},
+   pages = {1-191},
+   publisher = {Springer International Publishing},
+   title = {Wildland fuel fundamentals and applications},
+   year = {2015},
+}
+
+@report{FIREMON2006,
+   author = {USDA Forest Service - Rocky Mountain Research Station {USDA Forest Service}},
+   isbn = {406.329.4846},
+   keywords = {analysis,burn severity,fire effects,fuels,inventory,monitoring,sample design,sampling methods},
+   title = {FIREMON: Fire Effects Monitoring and Inventory System},
+   year = {2006},
+}
+
+@report{Andrews2018,
+    author = {Patricia L Andrews},
+    title = {The Rothermel Surface Fire Spread Model and Associated Developments: A Comprehensive Explanation},
+    keywords = {fire-danger rating,flame length,fuel model,mathematical model,rate of spread,wildland fire},
+    year = {2018},
+}
+
+@book{Rothermel1972,
+   author = {Richard C Rothermel},
+   journal = {Intermountain Forest & Range Experiment Station, Forest Service, US Department of Agriculture},
+   title = {A mathematical model for predicting fire spread in wildland fuels},
+   year = {1972},
+}
+
+@report{Bolte2006,
+   author = {Andreas Bolte},
+   title = {Digitalisierung im Waldmonitoring View project Charta für Holz 2.0 View project},
+   url = {https://www.researchgate.net/publication/235939559},
+   year = {2006},
+}
+
+@article{Annig2016,
+   abstract = {Biomass equations are a helpful tool to estimate the tree and stand biomass production and standing stock. Such estimations are of great interest for science but also of great importance for global reports on the carbon cycle and the global climate system. Even though there are various collections and generic meta-analyses available with biomass equations for mature trees, reports on biomass equations for juvenile trees (seedlings and saplings) are mainly missing. Against the background of an increasing amount of reforestation and afforestation projects and forests in young successional stages, such equations are required. In this study we have collected data from various studies on the aboveground woody biomass of 19 common tree species growing in Europe. The aim of this paper was to calculate species-specific biomass equations for the aboveground woody biomass of single trees in dependence of root-collar-diameter (RCD), height (H) and the combination of the two (RCD2 H). Next to calculating species-specific biomass equations for the species available in the dataset, we also calculated generic biomass equations for all broadleaved species and all conifer species. The biomass equations should be a contribution to the pool of published biomass equations, whereas the novelty is here that the equations were exclusively derived for young trees.},
+   author = {Peter Annighöfer and Aitor Ameztegui and Christian Ammer and Philippe Balandier and Norbert Bartsch and Andreas Bolte and Lluís Coll and Catherine Collet and Jörg Ewald and Nico Frischbier and Tsegay Gebereyesus and Josephine Haase and Tobias Hamm and Bastian Hirschfelder and Franka Huth and Gerald Kändler and Anja Kahl and Heike Kawaletz and Christian Kuehne and André Lacointe and Na Lin and Magnus Löf and Philippe Malagoli and André Marquier and Sandra Müller and Susanne Promberger and Damien Provendier and Heinz Röhle and Jate Sathornkich and Peter Schall and Michael Scherer-Lorenzen and Jens Schröder and Carolin Seele and Johannes Weidig and Christian Wirth and Heino Wolf and Jörg Wollmerstädt and Martina Mund},
+   doi = {10.1007/s10342-016-0937-z},
+   issn = {16124669},
+   issue = {2},
+   journal = {European Journal of Forest Research},
+   keywords = {Allometric equations,Forest regeneration,Juvenile tree biomass},
+   month = {4},
+   pages = {313-329},
+   publisher = {Springer Verlag},
+   title = {Species-specific and generic biomass equations for seedlings and saplings of European tree species},
+   volume = {135},
+   year = {2016},
+}
+
+
+
+%%% ------------ %%%
+%%%    Theory    %%%
+%%% ------------ %%%
+
+@report{Goodfellow2016,
+   author = {Ian Goodfellow and Yoshua Bengio and Aaron Courville},
+   title = {Deep Learning},
+   year = {2016},
+}
+
+@report{Brownlee2020,
+   author = {Jason Brownlee},
+   title = {Probability for Machine Learning Discover How To Harness Uncertainty With Python},
+   year = {2020},
+}
+
+@report{Starmer2022,
+   author = {Josh Starmer},
+   title = {The StatQuest Illustrated Guide to Machine Learning!!! TRIPLE BAM!!!},
+   url = {https://statquest.org/support-statquest/.},
+   year = {2022},
+}
+
+@article{Kattenborn2021,
+   abstract = {Identifying and characterizing vascular plants in time and space is required in various disciplines, e.g. in forestry, conservation and agriculture. Remote sensing emerged as a key technology revealing both spatial and temporal vegetation patterns. Harnessing the ever growing streams of remote sensing data for the increasing demands on vegetation assessments and monitoring requires efficient, accurate and flexible methods for data analysis. In this respect, the use of deep learning methods is trend-setting, enabling high predictive accuracy, while learning the relevant data features independently in an end-to-end fashion. Very recently, a series of studies have demonstrated that the deep learning method of Convolutional Neural Networks (CNN) is very effective to represent spatial patterns enabling to extract a wide array of vegetation properties from remote sensing imagery. This review introduces the principles of CNN and distils why they are particularly suitable for vegetation remote sensing. The main part synthesizes current trends and developments, including considerations about spectral resolution, spatial grain, different sensors types, modes of reference data generation, sources of existing reference data, as well as CNN approaches and architectures. The literature review showed that CNN can be applied to various problems, including the detection of individual plants or the pixel-wise segmentation of vegetation classes, while numerous studies have evinced that CNN outperform shallow machine learning methods. Several studies suggest that the ability of CNN to exploit spatial patterns particularly facilitates the value of very high spatial resolution data. The modularity in the common deep learning frameworks allows a high flexibility for the adaptation of architectures, whereby especially multi-modal or multi-temporal applications can benefit. An increasing availability of techniques for visualizing features learned by CNNs will not only contribute to interpret but to learn from such models and improve our understanding of remotely sensed signals of vegetation. Although CNN has not been around for long, it seems obvious that they will usher in a new era of vegetation remote sensing.},
+   author = {Teja Kattenborn and Jens Leitloff and Felix Schiefer and Stefan Hinz},
+   doi = {10.1016/j.isprsjprs.2020.12.010},
+   issn = {09242716},
+   journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+   keywords = {Convolutional Neural Networks (CNN),Deep learning,Earth observation,Plants,Remote sensing,Vegetation},
+   month = {3},
+   pages = {24-49},
+   publisher = {Elsevier B.V.},
+   title = {Review on Convolutional Neural Networks (CNN) in vegetation remote sensing},
+   volume = {173},
+   year = {2021},
+}
+
+
+%%% ------------ %%%
+%%%   Discussion  %%%
+%%% ------------ %%%
+@article{Schiller2021,
+   abstract = {Plant functional traits (‘traits’) are essential for assessing biodiversity and ecosystem processes, but cumbersome to measure. To facilitate trait measurements, we test if traits can be predicted through visible morphological features by coupling heterogeneous photographs from citizen science (iNaturalist) with trait observations (TRY database) through Convolutional Neural Networks (CNN). Our results show that image features suffice to predict several traits representing the main axes of plant functioning. The accuracy is enhanced when using CNN ensembles and incorporating prior knowledge on trait plasticity and climate. Our results suggest that these models generalise across growth forms, taxa and biomes around the globe. We highlight the applicability of this approach by producing global trait maps that reflect known macroecological patterns. These findings demonstrate the potential of Big Data derived from professional and citizen science in concert with CNN as powerful tools for an efficient and automated assessment of Earth’s plant functional diversity.},
+   author = {Christopher Schiller and Sebastian Schmidtlein and Coline Boonman and Alvaro Moreno-Martínez and Teja Kattenborn},
+   doi = {10.1038/s41598-021-95616-0},
+   issn = {20452322},
+   issue = {1},
+   journal = {Scientific Reports},
+   month = {12},
+   pmid = {34385494},
+   publisher = {Nature Research},
+   title = {Deep learning and citizen science enable automated plant trait predictions from photographs},
+   volume = {11},
+   year = {2021},
+}
+
+@article{Santos2022,
+   abstract = {We assessed the performance of Convolutional Neural Network (CNN)-based approaches using mobile phone images to estimate regrowth density in tropical forages. We generated a dataset composed of 1124 labeled images with 2 mobile phones 7 days after the harvest of the forage plants. Six architectures were evaluated, including AlexNet, ResNet (18, 34, and 50 layers), ResNeXt101, and DarkNet. The best regression model showed a mean absolute error of 7.70 and a correlation of 0.89. Our findings suggest that our proposal using deep learning on mobile phone images can successfully be used to estimate regrowth density in forages.},
+   author = {Luiz Santos and José Marcato Junior and Pedro Zamboni and Mateus Santos and Liana Jank and Edilene Campos and Edson Takashi Matsubara},
+   doi = {10.3390/s22114116},
+   issn = {14248220},
+   issue = {11},
+   journal = {Sensors},
+   keywords = {deep learning,forages,regrowth density},
+   month = {6},
+   pmid = {35684736},
+   publisher = {MDPI},
+   title = {Deep Learning Regression Approaches Applied to Estimate Tillering in Tropical Forages Using Mobile Phone Images},
+   volume = {22},
+   year = {2022},
+}
+
+
+
+@article{Verma2021,
+   author = {Devvret Verma and Dibyahash Bordoloi and Vikas Tripathi},
+   doi = {10.29121/web/v18i5/60},
+   journal = {Webology},
+   pages = {3241-3246},
+   publisher = {Granthaalayah Publications and Printers},
+   title = {Plant Leaf Disease Detection Using Mobilenetv2},
+   year = {2021},
+}
+
+
+
+%%% ------------ %%%
+%%%   Sonstiges  %%%
+%%% ------------ %%%
+% Golden Ratio
+@article{Schneider2016,
+   abstract = {In this expository paper written to commemorate Fibonacci Day 2016, we discuss famous relations involving the Fibonacci sequence, the golden ratio, continued fractions and nested radicals, and show how these fit into a more general framework stemming from the quadratic formula.},
+   author = {Robert Schneider},
+   keywords = {()},
+   title = {FIBONACCI NUMBERS AND THE GOLDEN RATIO},
+   year = {2016},
+}
+
+@article{Kingma2014,
+   abstract = {We introduce Adam, an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. The method is straightforward to implement, is computationally efficient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients. The hyper-parameters have intuitive interpretations and typically require little tuning. Some connections to related algorithms, on which Adam was inspired, are discussed. We also analyze the theoretical convergence properties of the algorithm and provide a regret bound on the convergence rate that is comparable to the best known results under the online convex optimization framework. Empirical results demonstrate that Adam works well in practice and compares favorably to other stochastic optimization methods. Finally, we discuss AdaMax, a variant of Adam based on the infinity norm.},
+   author = {Diederik P. Kingma and Jimmy Ba},
+   month = {12},
+   title = {Adam: A Method for Stochastic Optimization},
+   url = {http://arxiv.org/abs/1412.6980},
+   year = {2014},
+}
+
+@book{Python3,
+ author = {Van Rossum, Guido and Drake, Fred L.},
+ title = {Python 3 Reference Manual},
+ year = {2009},
+ isbn = {1441412697},
+ publisher = {CreateSpace},
+ address = {Scotts Valley, CA}
+} 
+
+@misc{TensorFlow,
+title={ {TensorFlow}: Large-Scale Machine Learning on Heterogeneous Systems},
+url={https://www.tensorflow.org/},
+note={Software available from tensorflow.org},
+author={
+    Mart\'{i}n~Abadi and
+    Ashish~Agarwal and
+    Paul~Barham and
+    Eugene~Brevdo and
+    Zhifeng~Chen and
+    Craig~Citro and
+    Greg~S.~Corrado and
+    Andy~Davis and
+    Jeffrey~Dean and
+    Matthieu~Devin and
+    Sanjay~Ghemawat and
+    Ian~Goodfellow and
+    Andrew~Harp and
+    Geoffrey~Irving and
+    Michael~Isard and
+    Yangqing Jia and
+    Rafal~Jozefowicz and
+    Lukasz~Kaiser and
+    Manjunath~Kudlur and
+    Josh~Levenberg and
+    Dandelion~Man\'{e} and
+    Rajat~Monga and
+    Sherry~Moore and
+    Derek~Murray and
+    Chris~Olah and
+    Mike~Schuster and
+    Jonathon~Shlens and
+    Benoit~Steiner and
+    Ilya~Sutskever and
+    Kunal~Talwar and
+    Paul~Tucker and
+    Vincent~Vanhoucke and
+    Vijay~Vasudevan and
+    Fernanda~Vi\'{e}gas and
+    Oriol~Vinyals and
+    Pete~Warden and
+    Martin~Wattenberg and
+    Martin~Wicke and
+    Yuan~Yu and
+    Xiaoqiang~Zheng},
+  year={2015}
+}
+
+
+@article{Ubuntu,
+   author = {{Ubuntu 20.04}},
+   title = {Ubuntu 20.04 LTS (Focal Fossa) - Official Documentation},
+   url = {https://help.ubuntu.com/},
+   year = {},
+}
+
+
+%%% ------------ %%%
+%%% Online-Links %%%
+%%% ------------ %%%
+
+@online{TensorFlowOnline,
+  author = {TensorFlow},
+  url = "https://www.tensorflow.org/",
+  note = "[Accessed 1-February-2023]"
+}
+
+@online{InceptionMeme,
+   author = {},
+   title = {"we need to go deeper"},
+   url = {https://knowyourmeme.com/memes/we-need-to-go-deeper},
+}
+
+@online{Reuters2023,
+   author = {\hypertarget{bl_Reuters}{Reuters}},
+   date = {2023-02-01},
+   title = {ChatGPT sets record for fastest-growing user base - analyst note | Reuters},
+   url = {https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/},
+   year = {2023},
+   note = "[Accessed 15-March-2023]"
+}
+
+@online{CNNChatGPT2022,
+   author = {\hypertarget{bl_CNN}{{CNN Business}}},
+   date = {2022-12-08},
+   title = {ChatGPT: This AI chatbot is dominating social media with its frighteningly good essays | CNN Business},
+   url = {https://edition.cnn.com/2022/12/05/tech/chatgpt-trnd/index.html},
+   year = {2022},
+   note = "[Accessed 15-March-2023]"
+}
+
+@online{tagesthemen2023,
+   author = {\hypertarget{bl_tagesthemen}{tagesthemen}},
+   date = {2023-01-11},
+   title = {tagesthemen - Sendung vom 11.01.2023, 22:15 Uhr | tagesschau.de},
+   url = {https://www.tagesschau.de/multimedia/sendung/tt-9859.html},
+   year = {2023},
+   note = "[Accessed 15-March-2023]"
+}
+
+\hypertarget{bl_FISA}{}
+@online{FISA_ERWIN,
+   author = {\hypertarget{bl_FISA}{FISA}},
+   title = {Collaborative project: Expansion of ecological, silvicultural and technical knowledge about forest fires. Subproject 1: Improved understanding of forest fire dynamics in German forests using deep learning and fire propagation simulations (ErWiN) | FISA - Forschungsinformationssystem Agrar und Ernährung},
+   url = {https://www.fisaonline.de/en/find-projects/details/?tx_fisaresearch_projects%5Baction%5D=projectDetails&tx_fisaresearch_projects%5Bcontroller%5D=Projects&tx_fisaresearch_projects%5Bp_id%5D=14097&cHash=1b234fdac0dd9ec40963b5418beddbdb#more},
+   note = "[Accessed 17-March-2023]"
+}
+
+@online{FlamMap6,
+   author = {FlamMap6},
+   title = {FlamMap | Missoula Fire Sciences Laboratory},
+   url = {https://www.firelab.org/project/flammap},
+   note = "[Accessed 27-March-2023]"
+}
+
+@online{sklearn,
+   author = {sklearn},
+   title = {sklearn.metrics.r2_score — scikit-learn 1.2.2 documentation},
+   url = {https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html},
+   note = "[Accessed 30-March-2023]"
+}
+
+
+@article{scikit-learn,
+ title={Scikit-learn: Machine Learning in {P}ython},
+ author={Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V.
+         and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P.
+         and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and
+         Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
+ journal={Journal of Machine Learning Research},
+ volume={12},
+ pages={2825--2830},
+ year={2011}
+}
